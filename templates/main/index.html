@@ -1,0 +1,85 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% load bootstrap4%}
+{% block content%}
+<section class="welcome">
+    <div class="container">
+        <div class="text-light text-center head">
+            <h1>REDUCING THE GAP</h1>
+            <p>For reliable, efficient and quality services</p>
+        </div>
+    </div>
+</section>
+<section class="about" id="about">
+    <div class="container">
+            <div class="services">
+                    <br>
+                    <h1 class="text-center">About Us</h1>
+                </div>
+        <div class="row">
+            <div class="col-md-4 goal text-center">
+                <h2 class="text-center">Our vision</h2>
+                <p>To be the preferred provider of secure and trusted housing.</p>
+            </div>
+            <div class="col-md-4 goal text-center">
+                    <h2 class="text-center">Our mission</h2>
+                    <p>We shall provide quality services that will aim at creating lasting relationship our cureent and future customers.</p>
+                </div>
+                <div class="col-md-4 goal text-center">
+                        <h2 class="text-center">Our mission</h2>
+                        <p>Diligent, Smart and Strategic</p>
+                    </div>
+        </div>
+    </div>
+
+</section>
+<section id="services">
+        <div class="container" >
+            <div class="services">
+                <br>
+                <h1 class="text-center">Our Services</h1>
+            </div>
+            <div class="row" id="row">
+                <div class="col-md-4 serv" id="house">
+                    <div class="house1">
+                        <div class="icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Consultancy services</h3>
+                    </div>
+                    <div class="house2">
+                        <h3>Giving advices</h3>
+                        <p>We ensure that whatever you want is legit and of good quality</p>
+                    </div>
+                </div>
+                <div class="col-md-4 serv" id="office">
+                    <div class="office1">
+                        <div class="icon">
+                            <i class="far fa-building"></i>
+                        </div>
+                        <h3>Giving updates</h3>
+                    </div>
+                    <div class="office2">
+                        <h3>Know of new houses</h3>
+                        <p>We keep updating our system with the new available houses
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 serv" id="pet">
+                    <div class="pet1">
+                        <div class="icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Customer care</h3>
+                    </div>
+                    <div class="pet2">
+                        <h3>How can we help you?</h3>
+                        <p>Get in touch with one of our agents any time you want'
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{%endblock%}

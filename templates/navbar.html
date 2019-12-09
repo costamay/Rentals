@@ -1,5 +1,5 @@
 <nav class="mb-1 navbar navbar-expand-lg navbar-dark  lighten-1 fixed-top" style="font-weight:bold; background-color:black; font-size:25px" >
-    <a class="navbar-brand" href="/" style="font-style:italic;">Titus</a>
+    <a class="navbar-brand" href="/" style="font-style:italic;"><img src="/static/img/logo.png" alt="HOUSE" style="border-radius:50%; width:80px; height:auto;"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
       aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -11,12 +11,14 @@
             <span class="sr-only">(current)</span>
           </a>
         </li>
+        {% if not user.is_authenticated%}
         <li class="nav-item">
           <a class="nav-link" href="#about"><i class="fas fa-info-circle ml-4"></i>About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link ml-4" href="#services">Our Services</a>
        </li>
+       {% endif%}
        <li class="nav-item">
             <a class="nav-link" href="#contact"><i class="fa fa-phone ml-4"></i>Contact us</a>
          </li>

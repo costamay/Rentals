@@ -15,7 +15,7 @@ class Profile(models.Model):
     def save_profile(self):
         self.save()
 
-    def delete_save(self):
+    def delete_profile(self):
         self.delete()
 
     def __str__(self):
@@ -61,6 +61,18 @@ class House(models.Model):
     def search(cls,searchterm):
         search = cls.objects.filter(house_location__icontains=searchterm)
         return search
+
+    @classmethod
+    def find_house(cls,house_id):
+        house= cls.objects.get(id=house_id)
+        return house
+
+    @classmethod   
+    def update_house(cls,id,house_type):
+        cls.objects.filter(pk = id).update(house_type=house_type)
+        new_name_object = cls.objects.get(house_type = house_type)
+        new_name = new_name_object.house_type
+        return new_name
 
     def __str__(self):
         return f'{self.house_no}'

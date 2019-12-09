@@ -12,4 +12,5 @@ urlpatterns = [
     path('', include('houses.urls')),
     path('accounts/', include('django_registration.backends.one_step.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('ratings/', include('star_ratings.urls', namespace='ratings')),
 ]

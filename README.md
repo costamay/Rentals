@@ -7,7 +7,7 @@
 Application that allow users to find and serch for houses for renting
 
 ## Project live site
-  This is the live .[ Click for the link]()
+  This is the live .[ Click for the link](https://rentals001.herokuapp.com/)
  ![Image](/static/img/screen.png)
  
  ![alt text](/static/img/screenshort.png)

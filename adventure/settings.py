@@ -1,6 +1,6 @@
 
 import os
-
+import django_heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'pyuploadcare.dj',
     'django_registration',
+    'star_ratings',
 ]
 
 UPLOADCARE = {
@@ -45,6 +46,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'adventure.urls'
@@ -106,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
@@ -116,6 +118,15 @@ USE_TZ = True
 
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = 'index'
+
+STAR_RATINGS_RERATE = False
+STAR_RATINGS_RANGE=5
+STAR_RATINGS_STAR_HEIGHT=20
+STAR_RATINGS_STAR_WIDTH=20
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/

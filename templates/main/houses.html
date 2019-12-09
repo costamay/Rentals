@@ -1,0 +1,45 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% load bootstrap4%}
+{% block content%}
+<div class="container-fluid" style="margin-top:70px">
+    <div class="row">
+       
+           {% for house in houses %}
+           <div class="col-md-4">
+            <div class="card">
+
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <img class="card-img-top" src="{{house.house_pic.url}}" alt="Card image cap">
+                      <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                  
+                    <!-- Card content -->
+                    <div class="card-body">
+                  
+                      <!-- Title -->
+                      <div class="card-title d-flex justify-content-between">
+                          <div>
+                              <h2 style="font-weight:bold" class="btn btn-dark text light">Location: <span class="ml-2">{{house.house_location}}</span></h2>
+                              <h4 style="font-weight:bold" class="btn btn-dark text light">Room Number: <span class="ml-2">{{house.house_no}}</span></h4>
+                        </div>
+                          <div>{{house.date_posted}}</div>
+                      </div>
+                      <!-- Text -->
+                      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                      <!-- Button -->
+                      <a href="{% url 'details' house.id %}" class="btn btn-outline-danger">Views More Details</a>
+                  
+                    </div>
+                  
+                  </div>
+                </div>
+              {% endfor%}    <!-- Card -->
+        
+    </div>
+</div>
+
+{%endblock%}

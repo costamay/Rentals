@@ -1,6 +1,6 @@
 <!-- Footer -->
 <footer class="page-footer font-small stylish-color-dark pt-4 " id="contact">
-
+  
         <!-- Footer Links -->
         <div class="container text-center text-md-left">
       
@@ -91,7 +91,7 @@
       
         </div>
         <!-- Footer Links -->
-      
+        {% if not user.is_authenticated %}
         <hr>
       
         <!-- Call to action -->
@@ -106,7 +106,7 @@
         <!-- Call to action -->
       
         <hr>
-      
+        {% endif %}
         <!-- Social buttons -->
         <ul class="list-unstyled list-inline text-center">
           <li class="list-inline-item">
@@ -116,22 +116,22 @@
           </li>
           <li class="list-inline-item">
             <a class="btn-floating btn-tw mx-1">
-              <i class="fab fa-twitter fa-2x"> </i>
+              <i class="fab fa-twitter fa-2x ml-4"> </i>
             </a>
           </li>
           <li class="list-inline-item">
             <a class="btn-floating btn-gplus mx-1">
-              <i class="fab fa-google-plus-g fa-2x"> </i>
+              <i class="fab fa-google-plus-g fa-2x ml-4"> </i>
             </a>
           </li>
           <li class="list-inline-item">
             <a class="btn-floating btn-li mx-1">
-              <i class="fab fa-linkedin-in fa-2x"> </i>
+              <i class="fab fa-linkedin-in fa-2x ml-4"> </i>
             </a>
           </li>
           <li class="list-inline-item">
             <a class="btn-floating btn-dribbble mx-1">
-              <i class="fab fa-github fa-2x"> </i>
+              <i class="fab fa-github fa-2x ml-4"> </i>
             </a>
           </li>
         </ul>

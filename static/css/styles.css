@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Merienda&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Carter+One|Merienda&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Carter+One|Merienda|Merienda+One&display=swap');.welcome{
-    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("/static/img/real9.jpg")center/ cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("/static/img/real9.jpg")center/ cover no-repeat fixed;
     min-height: 80vh;
+    
     
 }
 
@@ -73,20 +74,20 @@
 #contact p,#contact li a{
     font-size: 20px
 }
-.real:hover{
- color: red;
- background-color: black;
-}
+
 
 h1{
     font-family: 'Carter One', cursive;
 }
 
-#about h2{
+#about h2, h3{
     font-family: 'Merienda One', cursive;
 }
+
+
 .text-muted{
     display: none;
+    
 }
 
 .reg{
